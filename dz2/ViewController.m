@@ -14,6 +14,30 @@
 
 @implementation ViewController
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showDetailSegue"]){
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        TableViewController *controller = (TableViewController *)navController.topViewController;
+        NSMutableAttributedString *attstr =[_myTextView attributedText];
+        //controller.appData = nil;
+        
+        NSMutableArray *arrayData;
+        
+        [_myTextView.attributedText enumerateAttributesInRange:NSMakeRange(0, [_myTextView.attributedText length]) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary *attributes, NSRange range, BOOL *stop) {
+            UIColor *color = [attributes objectForKey:NSForegroundColorAttributeName];
+            if ([color isEqual:[UIColor redColor]]||[color isEqual:[UIColor greenColor]]||[color isEqual:[UIColor blueColor]]||[color isEqual:[UIColor orangeColor]]) {
+                NSAttributedString *as = [[NSAttributedString alloc] initWithString:[_myTextView.text substringWithRange:range]attributes:@{NSForegroundColorAttributeName:color}];
+                [arrayData addObject:as];
+            }
+            controller.appData = arrayData;
+            
+        }];
+    }
+    
+    /*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        [_myTextView.TextStorage enumerateAttribute*/
+    }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
