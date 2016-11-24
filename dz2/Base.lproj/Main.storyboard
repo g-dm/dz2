@@ -86,7 +86,7 @@
                     <navigationItem key="navigationItem" id="kaG-UT-7ZV">
                         <barButtonItem key="rightBarButtonItem" title="Посмотреть" id="anl-Uv-3gb">
                             <connections>
-                                <segue destination="cjL-AE-dS5" kind="show" id="VN3-Tt-7SJ"/>
+                                <segue destination="dbx-Fy-eIn" kind="show" id="XtI-PD-qSI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,22 +99,22 @@
             <point key="canvasLocation" x="292" y="124.58770614692655"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="NOB-rB-sGj">
+        <scene sceneID="e8h-C1-3kW">
             <objects>
-                <tableViewController id="cjL-AE-dS5" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="4" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EDR-wL-EDh">
+                <tableViewController id="dbx-Fy-eIn" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z6K-Ob-kLQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" textLabel="v66-Is-8F7" style="IBUITableViewCellStyleDefault" id="Uf0-PF-hcc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListPrototypeCell" textLabel="eqO-rQ-8eM" style="IBUITableViewCellStyleDefault" id="fOB-xR-1xN">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uf0-PF-hcc" id="OLY-MG-E4M">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ListPrototypeCell" tableViewCell="fOB-xR-1xN" id="vxA-Zk-1k5">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v66-Is-8F7">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eqO-rQ-8eM">
                                             <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -125,15 +125,16 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="cjL-AE-dS5" id="cus-34-pEB"/>
-                            <outlet property="delegate" destination="cjL-AE-dS5" id="O0f-aY-ivL"/>
+                            <outlet property="dataSource" destination="dbx-Fy-eIn" id="sr7-HH-KHK"/>
+                            <outlet property="delegate" destination="dbx-Fy-eIn" id="W7X-4s-P26"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1h3-V0-HeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wb2-Zt-yoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="125"/>
+            <point key="canvasLocation" x="1055" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cgR-q3-2fM">

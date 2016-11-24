@@ -15,11 +15,11 @@
 @implementation ViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showDetailSegue"]){
+    /*if([segue.identifier isEqualToString:@"showDetailSegue"]){
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         TableViewController *controller = (TableViewController *)navController.topViewController;
-        NSMutableAttributedString *attstr =[_myTextView attributedText];
-        //controller.appData = nil;
+        //NSMutableAttributedString *attstr =[_myTextView attributedText];
+        //controller.appData = attstr;*/
         
         NSMutableArray *arrayData;
         
@@ -29,6 +29,8 @@
                 NSAttributedString *as = [[NSAttributedString alloc] initWithString:[_myTextView.text substringWithRange:range]attributes:@{NSForegroundColorAttributeName:color}];
                 [arrayData addObject:as];
             }
+            
+            TableViewController *controller = [segue destinationViewController];
             controller.appData = arrayData;
             
         }];
@@ -36,7 +38,7 @@
     
     /*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         [_myTextView.TextStorage enumerateAttribute*/
-    }
+    
 
 - (void)viewDidLoad {
     [super viewDidLoad];

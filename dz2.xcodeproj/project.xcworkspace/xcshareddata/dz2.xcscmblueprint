@@ -5,17 +5,24 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "69BA86041178924C85A6F63632453EAEE496BAD4" : 9223372036854775807,
-    "B554304E77F539158866F934EA545F2D17026B46" : 9223372036854775807
+    "B554304E77F539158866F934EA545F2D17026B46" : 9223372036854775807,
+    "525076A206689CFF14CBD8DA425DC947778FDA35" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A78E8211-1C39-42C0-B78B-0B08252E664B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "69BA86041178924C85A6F63632453EAEE496BAD4" : "dz2.xcodeproj\/",
-    "B554304E77F539158866F934EA545F2D17026B46" : ""
+    "B554304E77F539158866F934EA545F2D17026B46" : "",
+    "525076A206689CFF14CBD8DA425DC947778FDA35" : "dz2\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : ".",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : ".",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/g-dm\/dz2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "525076A206689CFF14CBD8DA425DC947778FDA35"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/g-dm\/dz2.xcodeproj.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

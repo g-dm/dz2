@@ -49,17 +49,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 4;
+    return [appData count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
+    NSMutableArray *appDataTest;
+    NSMutableString *objectTest = [NSMutableString stringWithString:@"test1"];
+    [appDataTest addObject:objectTest];
     
-    
-    cell.textLabel.text = [appData objectAtIndex:indexPath.row];
-    
+    //cell.textLabel.text = [appData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [appDataTest objectAtIndex:indexPath.row];
     
     return cell;
 }
