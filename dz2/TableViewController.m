@@ -62,7 +62,7 @@
     
     //cell.textLabel.text = [appData objectAtIndex:indexPath.row];
     cell.textLabel.text = [appDataTest objectAtIndex:indexPath.row];
-    
+    cell.textLabel.text = @"Тест";
     return cell;
 }
 
