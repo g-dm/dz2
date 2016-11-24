@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dz2/ViewController.m"
-            timestampString = "501636486.947693"
+            timestampString = "501695956.983555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-PressClearButton:"
             landmarkType = "7">
          </BreakpointContent>

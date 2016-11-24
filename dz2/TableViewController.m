@@ -15,6 +15,9 @@
 @end
 
 @implementation TableViewController
+{
+    NSMutableArray *appDataTest;
+}
 @synthesize appData;
 
 - (void)loadInitialData {
@@ -24,7 +27,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSMutableString *objectTest = [NSMutableString stringWithString:@"test1"];
+    [appDataTest addObject:objectTest];
+    NSMutableString *objectTest2 = [NSMutableString stringWithString:@"test2"];
+    [appDataTest addObject:objectTest2];
+    NSMutableString *objectTest3 = [NSMutableString stringWithString:@"test3"];
+    [appDataTest addObject:objectTest3];
+    //appData = @[@"1", @"2", @"3"];
    // self.colorList = [NSMutableArray arrayWithObjects: redString, greenString, blueString, orangeString, nil];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -49,20 +58,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
+    //return [appDataTest count];
     return [appData count];
+    //return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
-    NSMutableArray *appDataTest;
-    NSMutableString *objectTest = [NSMutableString stringWithString:@"test1"];
-    [appDataTest addObject:objectTest];
     
-    //cell.textLabel.text = [appData objectAtIndex:indexPath.row];
-    cell.textLabel.text = [appDataTest objectAtIndex:indexPath.row];
-    cell.textLabel.text = @"Тест";
+    
+    cell.textLabel.attributedText = [appData objectAtIndex:indexPath.row];
+    //cell.textLabel.text = [appDataTest objectAtIndex:indexPath.row];
+    //cell.textLabel.text = @"Тест";
     return cell;
 }
 

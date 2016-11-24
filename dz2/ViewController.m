@@ -8,11 +8,15 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+{
+    NSMutableArray *arrayData;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     /*if([segue.identifier isEqualToString:@"showDetailSegue"]){
@@ -21,7 +25,8 @@
         //NSMutableAttributedString *attstr =[_myTextView attributedText];
         //controller.appData = attstr;*/
         
-        NSMutableArray *arrayData;
+     //   NSMutableArray *arrayData;
+    [arrayData removeAllObjects];
         
         [_myTextView.attributedText enumerateAttributesInRange:NSMakeRange(0, [_myTextView.attributedText length]) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary *attributes, NSRange range, BOOL *stop) {
             UIColor *color = [attributes objectForKey:NSForegroundColorAttributeName];
@@ -42,6 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    arrayData = [NSMutableArray new];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
