@@ -33,6 +33,7 @@
             if ([color isEqual:[UIColor redColor]]||[color isEqual:[UIColor greenColor]]||[color isEqual:[UIColor blueColor]]||[color isEqual:[UIColor orangeColor]]) {
                 NSAttributedString *as = [[NSAttributedString alloc] initWithString:[_myTextView.text substringWithRange:range]attributes:@{NSForegroundColorAttributeName:color}];
                 [arrayData addObject:as];
+                [as release];
             }
             
             TableViewController *controller = [segue destinationViewController];
@@ -67,6 +68,7 @@
                    value: [UIColor redColor]
                    range: mySelectedRange];
     _myTextView.attributedText= attstr;
+    [attstr release];
     
 }
 
@@ -78,6 +80,7 @@
                    value: [UIColor greenColor]
                    range: mySelectedRange];
     _myTextView.attributedText= attstr;
+    [attstr release];
 }
 
 - (IBAction)PressBlueButton:(UIButton *)sender {
@@ -88,6 +91,7 @@
                    value: [UIColor blueColor]
                    range: mySelectedRange];
     _myTextView.attributedText= attstr;
+    [attstr release];
 }
 
 - (IBAction)PressOrangeButton:(UIButton *)sender {
@@ -98,11 +102,23 @@
                    value: [UIColor orangeColor]
                    range: mySelectedRange];
     _myTextView.attributedText= attstr;
+    [attstr release];
 }
 
 - (IBAction)PressClearButton:(UIButton *)sender {
     NSMutableString *str =[_myTextView text].mutableCopy;
     
     _myTextView.text= str;
+    [str release];
+}
+
+- (void) dealloc{
+    
+    [arrayData release];
+    
+    arrayData = nil;
+    
+    [super dealloc];
+    
 }
 @end

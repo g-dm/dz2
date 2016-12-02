@@ -10,7 +10,7 @@
 #import "TableViewController.h"
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *myTextView;
+@property (nonatomic) IBOutlet UITextView *myTextView;
 
 
 - (IBAction)PressRedButton:(UIButton *)sender;

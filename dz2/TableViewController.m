@@ -16,7 +16,7 @@
 
 @implementation TableViewController
 {
-    NSMutableArray *appDataTest;
+    //NSMutableArray *appDataTest;
 }
 @synthesize appData;
 
@@ -27,20 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableString *objectTest = [NSMutableString stringWithString:@"test1"];
-    [appDataTest addObject:objectTest];
-    NSMutableString *objectTest2 = [NSMutableString stringWithString:@"test2"];
-    [appDataTest addObject:objectTest2];
-    NSMutableString *objectTest3 = [NSMutableString stringWithString:@"test3"];
-    [appDataTest addObject:objectTest3];
-    //appData = @[@"1", @"2", @"3"];
-   // self.colorList = [NSMutableArray arrayWithObjects: redString, greenString, blueString, orangeString, nil];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 }
 
@@ -75,7 +62,15 @@
     return cell;
 }
 
-
+- (void) dealloc{
+    
+    [appData release];
+    
+    appData = nil;
+    
+    [super dealloc];
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
